@@ -15,9 +15,9 @@ User = get_user_model()
 
 class BucketList(APIView):
 
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
 
     def get(self, request):
         bucketlist = Bucketlist.objects.all()
-        Serializer = BucketlistSerializer(bucketlist, many=True)
+        serializer = BucketlistSerializer(bucketlist, many=True)
         return Response(serializer.data)
