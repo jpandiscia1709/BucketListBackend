@@ -1,6 +1,8 @@
 from django.urls import path
 from bucketlist import views
 
+
 urlpatterns = [
-    path('', views.BucketList.as_view())
+    path('all/', views.get_all_bucketlists),
+    path('', views.user_bucketlist),
 ]
