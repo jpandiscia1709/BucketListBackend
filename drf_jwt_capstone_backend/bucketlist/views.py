@@ -34,7 +34,8 @@ def user_bucketlist(request):
         serializer = BucketlistSerializer(bucketlist, many=True)
         return Response(serializer.data)
 
-
+# def index(request):
+#     return HttpResponse("<H2>Build Your Bucketlist! </H2>")
 
 
 # class BucketList(APIView):

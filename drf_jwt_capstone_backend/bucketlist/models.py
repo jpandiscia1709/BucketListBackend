@@ -9,3 +9,10 @@ User = get_user_model()
 class Bucketlist(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     adventure = models.CharField(max_length=100)
+
+
+class User(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField
+    phone = models.IntegerField
+    zip = models.IntegerField
