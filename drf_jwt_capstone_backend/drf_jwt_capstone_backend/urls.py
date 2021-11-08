@@ -20,4 +20,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/auth/', include('authentication.urls')),
     path('api/bucketlist/', include('bucketlist.urls')),
+    path('api/adventures/', include('adventures.urls')),
 ]
+
+
+
